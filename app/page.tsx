@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div>
       <div className="h-96 flex items-center border-b bg-black text-white">
-        <div className="w-full sm:max-w-4xl max-w-6xl mx-auto px-4">
+        <div className="w-full max-w-4xl lg:max-w-6xl mx-auto px-4">
           <h1 className="text-bold text-4xl">tuna2134</h1>
           <p>tuna2134です。最近アニメにはまっている人です</p>
         </div>
