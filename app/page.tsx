@@ -36,7 +36,7 @@ export default function Home() {
           <p>tuna2134です。最近アニメにはまっている人です</p>
         </div>
       </div>
-      <main className="w-full max-w-4xl md:max-w-6xl mx-auto px-4">
+      <main className="w-full max-w-4xl sm:max-w-6xl mx-auto px-4">
         <div className='py-6'>
           <h2 className="text-2xl font-bold underline">Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
