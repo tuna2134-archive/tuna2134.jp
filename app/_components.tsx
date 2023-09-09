@@ -10,7 +10,7 @@ const links = [
 export const Header = () => {
   return (
     <header className="border-b">
-      <div className="h-20 w-full max-w-6xl mx-auto flex items-center">
+      <div className="h-20 w-full max-w-6xl sm:max-w-4xl mx-auto flex items-center">
         <div>
           <Link href="/" className="text-4xl font-bold">tuna2134</Link>
         </div>
