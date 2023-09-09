@@ -31,12 +31,12 @@ export default function Home() {
   return (
     <div>
       <div className="h-96 flex items-center border-b bg-black text-white">
-        <div className="w-full max-w-4xl md:max-w-6xl mx-auto px-4">
+        <div className="w-full sm:max-w-4xl max-w-6xl mx-auto px-4">
           <h1 className="text-bold text-4xl">tuna2134</h1>
           <p>tuna2134です。最近アニメにはまっている人です</p>
         </div>
       </div>
-      <main className="w-full max-w-4xl sm:max-w-6xl mx-auto px-4">
+      <main className="w-full sm:max-w-4xl max-w-6xl mx-auto px-4">
         <div className='py-6'>
           <h2 className="text-2xl font-bold underline">Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
