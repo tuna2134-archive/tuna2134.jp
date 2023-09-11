@@ -13,8 +13,8 @@ const Layout = async ({
       <div className="w-1/4 border-r">
         <h2 className="py-2 text-2xl text-center w-full border-b font-bold">記事一覧</h2>
         <div>
-          {articles.map((article: Article) => (
-            <div className="p-4 border-b">
+          {articles.map((article: Article, index: number) => (
+            <div key={index} className="p-4 border-b">
               <Link href={`/blogs/${article.slug}`}>{article.title}</Link>
             </div>
           ))}
@@ -25,4 +25,4 @@ const Layout = async ({
   )
 };
 
-export default Page;
+export default Layout;

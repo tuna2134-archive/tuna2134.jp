@@ -1,6 +1,7 @@
 import { promises as fs } from "fs";
 import matter from "gray-matter";
 import markdownToHtml from 'zenn-markdown-html';
+import React from "react"
 
 export interface Article {
   slug: string;
@@ -30,4 +31,22 @@ export async function getArticles(): Promise<Article[]> {
   }))
   // 最新順にソート
   return articles.sort((a, b) => b.date.getTime() - a.date.getTime())
+}
+
+export const Article = async ({
+  article,
+}: {
+  article: Article,
+}) => {
+  return (
+    <>
+      <div className="bg-black text-white p-auto">
+        <div className="h-22 flex items-center p-4">
+          <h2 className="text-4xl">{article.title}</h2>
+          <p className="ml-auto">{article.date.toDateString()}</p>
+        </div>
+      </div>
+      <div className="mx-6 mt-4 prose-sm" dangerouslySetInnerHTML={{ __html: article.content }}></div>
+    </>
+  )
 }
