@@ -9,13 +9,15 @@ const Layout = async ({
 }) => {
   const articles = await getArticles();
   return (
-    <div className="flex h-screen max-w-6xl mx-auto border-x-0 lg:border-x">
-      <div className="w-1/4 border-r overflow-y-auto">
-        <h2 className="py-2 text-2xl text-center w-full border-b font-bold">記事一覧</h2>
+    <div className="flex h-screen max-w-6xl my-10 mx-auto border-x-0">
+      <div className="w-1/4 overflow-y-auto">
+        <h2 className="py-2 text-2xl text-center w-full font-bold">記事一覧</h2>
         <div>
           {articles.map((article: Article, index: number) => (
-            <div key={index} className="p-4 border-b">
-              <Link href={`/blogs/${article.slug}`}>{article.title}</Link>
+            <div key={index} className="p-4">
+              <Link className="flex items-center" href={`/blogs/${article.slug}`}>
+                <p className="text-sm text-gray-900 hover:text-violet-500">{article.title}</p>
+              </Link>
             </div>
           ))}
         </div>

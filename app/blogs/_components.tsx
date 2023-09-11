@@ -47,7 +47,7 @@ export const Article = async ({
           <p className="ml-auto">{article.date.toDateString()}</p>
         </div>
       </div>
-      <div className="mx-6 mt-4 znc prose prose-code:p-0 max-w-none" dangerouslySetInnerHTML={{ __html: article.content }}></div>
+      <div className="mx-6 my-4 znc prose prose-code:p-0 max-w-none" dangerouslySetInnerHTML={{ __html: article.content }}></div>
     </article>
   )
 }
