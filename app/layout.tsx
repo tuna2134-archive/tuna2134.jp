@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Noto_Sans_JP } from 'next/font/google'
-import { Header } from './_components'
+import { Header, Footer } from './_components'
 
 const inter = Inter({ subsets: ['latin'] });
 const notoSansJP = Noto_Sans_JP({ subsets: ['latin'] });
@@ -21,6 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} ${notoSansJP.className}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
