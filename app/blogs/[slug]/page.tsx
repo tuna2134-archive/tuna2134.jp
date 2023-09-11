@@ -10,6 +10,18 @@ export const generateStaticParams = async () => {
   return articles.map((article) => ({
     slug: article.slug,
   }));
+};
+
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { slug: string },
+}) => {
+  const article = await getArticle(params.slug);
+  return {
+    title: `tuna2134 | ${article.title}`,
+    description: article.description,
+  }
 }
 
 export default Page;
