@@ -20,6 +20,5 @@ spec:
           port:
             number: 3000
   tls:
-  - hosts:
-    - tuna2134.jp
-      secretName: tuna2134-jp-tls
+  - hosts: [tuna2134.jp]
+    secretName: tuna2134-jp-tls
