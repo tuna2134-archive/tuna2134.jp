@@ -5,11 +5,13 @@ date: 2023/5/1 22:43
 ---
 
 ## そもそもmetallbとは
+
 MetalLBは、ベアメタルKubernetesクラスタ用のロードバランサ実装で、標準ルーティングプロトコルを使用します。
 
 つまりGKEなどでServiceのLoadbalancerモードで動かすと、ランダムにIPが割り当てられるよって感じです。
 
 ## まずインストール
+
 以下のコマンドを実行してください。
 
 ```sh
@@ -20,6 +22,7 @@ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.9/confi
 ```
 
 ## セットアップ
+
 IPの割り当て範囲を指定します。この場合Layer2モードでやるのでBGPを探している方は後日出す記事を見てください。
 
 ```yaml
@@ -30,12 +33,13 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - 192.168.11.40-192.168.11.60
+    - 192.168.11.40-192.168.11.60
 ```
 
 とりあえずこんな感じにしてください。
 
 ## 使う
+
 さて、metallbこれで使えるようになりました！
 
 サンプルを試しに実行してみましょう！
@@ -57,10 +61,10 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
+        - name: nginx
+          image: nginx:1.14.2
+          ports:
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -70,9 +74,9 @@ spec:
   selector:
     app: nginx
   ports:
-  - name: http
-    protocol: TCP
-    port: 80
-    targetPort: 80
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
   type: LoadBalancer
 ```

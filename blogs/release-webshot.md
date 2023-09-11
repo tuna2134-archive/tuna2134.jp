@@ -5,6 +5,7 @@ date: 2023/7/1
 ---
 
 ## 利用ソフトウェア
+
 - kubernetes
 - TypeScript
 - Puppeteer-core
@@ -19,15 +20,16 @@ date: 2023/7/1
 
 **Parameters**
 
-| name | description | required |
-| :--: | :--:        | :--:     |
-| url  | サイトの宛先   | true     |
-| height | 高さ       | false    |
-| width  | 横幅       | false    |
+|  name  | description  | required |
+| :----: | :----------: | :------: |
+|  url   | サイトの宛先 |   true   |
+| height |     高さ     |  false   |
+| width  |     横幅     |  false   |
 
 ## サンプルコード
 
 **Python**
+
 ```py
 import requests
 
