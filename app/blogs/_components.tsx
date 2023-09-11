@@ -40,7 +40,7 @@ export const Article = async ({
   article: Article,
 }) => {
   return (
-    <>
+    <article>
       <div className="bg-black text-white p-auto">
         <div className="h-22 flex items-center p-4">
           <h2 className="text-2xl">{article.title}</h2>
@@ -48,6 +48,6 @@ export const Article = async ({
         </div>
       </div>
       <div className="mx-6 mt-4 znc prose prose-code:p-0 max-w-none" dangerouslySetInnerHTML={{ __html: article.content }}></div>
-    </>
+    </article>
   )
 }

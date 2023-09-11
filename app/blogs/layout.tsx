@@ -9,7 +9,7 @@ const Layout = async ({
 }) => {
   const articles = await getArticles();
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen max-w-6xl mx-auto border-x-0 lg:border-x">
       <div className="w-1/4 border-r overflow-y-auto">
         <h2 className="py-2 text-2xl text-center w-full border-b font-bold">記事一覧</h2>
         <div>
