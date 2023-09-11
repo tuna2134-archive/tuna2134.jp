@@ -44,6 +44,9 @@ dependencies:
   typescript:
     specifier: 5.2.2
     version: 5.2.2
+  zenn-content-css:
+    specifier: ^0.1.144
+    version: 0.1.144
   zenn-markdown-html:
     specifier: ^0.1.144
     version: 0.1.144(@types/markdown-it@13.0.1)
@@ -2823,6 +2826,10 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /zenn-content-css@0.1.144:
+    resolution: {integrity: sha512-HTO7UlbAmj5uvNhbiUb/YvNe3etl+jCBkuIlpBOVgW6+szv7B/q3yjqEpV1n68aus+WYbkjqDKc62bJww/5mwA==}
     dev: false
 
   /zenn-markdown-html@0.1.144(@types/markdown-it@13.0.1):

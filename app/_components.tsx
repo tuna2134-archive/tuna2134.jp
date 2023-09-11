@@ -28,7 +28,7 @@ export const Header = () => {
 
 export const Footer = () => {
   return (
-    <footer className="border-t mt-4">
+    <footer className="border-t">
       <div className="h-28 w-full max-w-2xl md:max-w-4xl xl:max-w-6xl px-4 mx-auto flex items-center">
         <div>
           <p className="font-medium text-3xl">tuna2134</p>

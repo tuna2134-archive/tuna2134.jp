@@ -10,7 +10,7 @@ const Layout = async ({
   const articles = await getArticles();
   return (
     <div className="flex h-screen">
-      <div className="w-1/4 border-r">
+      <div className="w-1/4 border-r overflow-y-auto">
         <h2 className="py-2 text-2xl text-center w-full border-b font-bold">記事一覧</h2>
         <div>
           {articles.map((article: Article, index: number) => (
@@ -20,7 +20,7 @@ const Layout = async ({
           ))}
         </div>
       </div>
-      <div className="w-3/4">{children}</div>
+      <div className="w-3/4 overflow-y-auto">{children}</div>
     </div>
   )
 };
