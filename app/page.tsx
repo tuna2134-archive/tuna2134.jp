@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import { getArticles } from './blogs/_components';
 
 const workLists = [
   {
@@ -33,7 +34,8 @@ const workLists = [
   }
 ]
 
-export default function Home() {
+export default async function Home() {
+  const articles = (await getArticles()).slice(0, 6);
   return (
     <div>
       <div className="h-96 flex items-center border-b bg-black text-white">
@@ -55,6 +57,24 @@ export default function Home() {
                 <div className="ml-auto">
                   <a href={work.url} className="ml-auto">
                     <Image src={work.image} alt="github" width={100} height={100} />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='py-6'>
+          <h2 className="text-2xl font-bold underline">Blogs</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            {articles.map((article, index) => (
+              <div className="flex items-center p-4 border rounded-2xl w-full" key={index}>
+                <div className="w-3/4">
+                  <h3 className="text-xl font-bold">{article.title}</h3>
+                  <p>{article.description}</p>
+                </div>
+                <div className="ml-auto">
+                  <a href={`/blogs/${article.slug}`} className="ml-auto">
+                    <Image src="/no-image.png" alt="github" width={100} height={100} />
                   </a>
                 </div>
               </div>

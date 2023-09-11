@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AiFillGithub } from "react-icons/ai";
 
 const links = [
   {
@@ -31,10 +32,12 @@ export const Footer = () => {
     <footer className="border-t">
       <div className="h-28 w-full max-w-2xl md:max-w-4xl xl:max-w-6xl px-4 mx-auto flex items-center">
         <div>
-          <p className="font-medium text-3xl">tuna2134</p>
+          <p className="font-medium text-xl">&copy; Copyright 2023 tuna2134</p>
         </div>
-        <nav className="ml-auto">
-          <a href="https://github.com/tuna2134">Github</a>
+        <nav className="ml-auto space-w-4">
+          <a href="https://github.com/tuna2134">
+            <AiFillGithub size={32} />
+          </a>
         </nav>
       </div>
     </footer>
