@@ -7,7 +7,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex h-screen max-w-6xl my-10 mx-auto border-x-0">
       <div className="w-1/4 overflow-y-auto">
-        <h2 className="py-2 text-2xl text-center w-full font-bold">記事一覧</h2>
+        <h2 className="py-0 xl:py-2 text-2xl text-center w-full font-bold">記事一覧</h2>
         <div>
           {articles.map((article: Article, index: number) => (
             <div key={index} className="p-4">
