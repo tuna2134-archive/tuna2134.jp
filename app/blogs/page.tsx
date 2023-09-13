@@ -8,7 +8,7 @@ const Page = async () => {
 export const generateMetadata = async () => {
   const article = (await getArticles())[0];
   return {
-    title: `tuna2134 | ${article.title}`,
+    title: article.title,
     description: article.description,
   };
 };
