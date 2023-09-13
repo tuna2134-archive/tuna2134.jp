@@ -19,7 +19,7 @@ export const generateMetadata = async ({
 }) => {
   const article = await getArticle(params.slug);
   return {
-    title: `tuna2134 | ${article.title}`,
+    title: article.title,
     description: article.description,
   };
 };
