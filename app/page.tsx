@@ -1,5 +1,10 @@
 import Image from "next/image";
 import { getArticles } from "./blogs/_components";
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Home",
+};
 
 const workLists = [
   {
