@@ -8,7 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "tuna2134",
+  title: {
+    template: '%s | tuna2134',
+    default: 'Something',
+  },
   description: "なんかある",
 };
 
